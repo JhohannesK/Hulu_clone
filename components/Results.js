@@ -1,21 +1,14 @@
-import React from "react"
-import Thumbnail from "./Thumbnail"
+import React from 'react';
+import Thumbnail from './Thumbnail';
 
+const Results = ({ results }) => {
+	return (
+		<div>
+			{results.map((items) => {
+				return <Thumbnail key={items.id} result={items} />;
+			})}
+		</div>
+	);
+};
 
-const Results = ({ request }) => {
-      return (
-            <div>
-                  {request.map((result) => {
-                        return (
-                              <>
-                                    <Thumbnail key={result.id} result={result} />
-                              </>
-                        )
-                  }
-
-                  )}
-            </div>
-      )
-}
-
-export default Results
+export default Results;

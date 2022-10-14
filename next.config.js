@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+	reactStrictMode: true,
+};
 
 module.exports = {
-  images: {
-    domains: ['links.papareact.com', 'image.tmdb.org']
-  }
-}
+	images: {
+		domains: ['links.papareact.com', 'image.tmdb.org', 'api.themoviedb.org'],
+	},
+};
