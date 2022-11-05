@@ -13,6 +13,7 @@ const Thumbnail = ({ result }) => {
 				height={500}
 			/>
 			<h1>{result.title}</h1>
+			<div>{result.overview}</div>
 		</div>
 	);
 };

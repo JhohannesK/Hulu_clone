@@ -1,4 +1,5 @@
 import React from 'react';
+import { RequestProps } from '../pages';
 import Thumbnail from './Thumbnail';
 
 const Results = ({ results }) => {

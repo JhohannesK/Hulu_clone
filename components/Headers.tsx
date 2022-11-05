@@ -9,7 +9,7 @@ import {
 	UserIcon,
 } from '@heroicons/react/outline';
 
-const Headers = () => {
+const Headers:React.FC = () => {
 	return (
 		<header className='flex flex-col sm:flex-row m-5 items-center justify-between h-auto'>
 			<div className='flex flex-grow justify-evenly max-w-2xl'>
