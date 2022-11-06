@@ -5,8 +5,9 @@ import Nav from '../components/Nav';
 import Results from '../components/Results';
 import requests from '../utils/request';
 
-export default function Home(results: Record<string, RequestProps>) {
+export default function Home(results: Record<'results', RequestProps[]>) {
 	console.log(results);
+	const data = results.results;
 	return (
 		<div className=''>
 			<Head>
@@ -19,7 +20,7 @@ export default function Home(results: Record<string, RequestProps>) {
 
 			<Nav />
 
-			<Results results={results} />
+			<Results results={data} />
 		</div>
 	);
 }
