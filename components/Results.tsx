@@ -18,12 +18,13 @@ interface ResultsProps {
 		video: boolean;
 		vote_average: number;
 		vote_count: number;
+		original_name?: string;
 	}>;
 }
 
 const Results = ({ results }: ResultsProps) => {
 	return (
-		<div>
+		<div className='grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-5 space-y-5 space-x-3 p-3 md:p-5'>
 			{results.map((items) => {
 				return <Thumbnail key={items.id} result={items} />;
 			})}
