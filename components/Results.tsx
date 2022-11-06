@@ -1,5 +1,4 @@
 import React from 'react';
-import { RequestProps } from '../pages';
 import Thumbnail from './Thumbnail';
 
 interface ResultsProps {
@@ -23,7 +22,6 @@ interface ResultsProps {
 }
 
 const Results = ({ results }: ResultsProps) => {
-	console.log(results);
 	return (
 		<div>
 			{results.map((items) => {

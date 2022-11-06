@@ -1,7 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
+import { RequestProps } from './_shared/types';
 
-const Thumbnail = ({ result }) => {
+interface ThumbnailProps {
+	result: RequestProps;
+}
+
+const Thumbnail = ({ result }: ThumbnailProps) => {
 	const base_url = 'https://image.tmdb.org/t/p/w400/';
 	return (
 		<div>

@@ -3,10 +3,10 @@ import Head from 'next/head';
 import Headers from '../components/Headers';
 import Nav from '../components/Nav';
 import Results from '../components/Results';
+import { RequestProps } from '../components/_shared/types';
 import requests from '../utils/request';
 
 export default function Home(results: Record<'results', RequestProps[]>) {
-	console.log(results);
 	const data = results.results;
 	return (
 		<div className=''>
@@ -23,24 +23,6 @@ export default function Home(results: Record<'results', RequestProps[]>) {
 			<Results results={data} />
 		</div>
 	);
-}
-
-export interface RequestProps {
-	adult: boolean;
-	backdrop_path: string;
-	genre_ids: number[];
-	id: number;
-	media_type: string;
-	original_language: string;
-	original_title: string;
-	overview: string;
-	popularity: number;
-	poster_path: string;
-	release_date: string;
-	title: string;
-	video: boolean;
-	vote_average: number;
-	vote_count: number;
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
