@@ -7,7 +7,6 @@ interface ThumbnailProps {
 }
 
 const Thumbnail = ({ result }: ThumbnailProps) => {
-	console.log(result);
 	const [display, setDisplay] = React.useState(false);
 	const base_url = 'https://image.tmdb.org/t/p/w400/';
 	return (

@@ -24,7 +24,7 @@ interface ResultsProps {
 
 const Results = ({ results }: ResultsProps) => {
 	return (
-		<div className='grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-5 space-y-5 space-x-3 p-3 md:p-5'>
+		<div className='grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-5 space-x-3 p-3 md:p-5'>
 			{results.map((items) => {
 				return <Thumbnail key={items.id} result={items} />;
 			})}
